@@ -2,6 +2,8 @@
 :root{
   --font-1:'Montserrat', sans-serif;
   --font-2: 'Ubuntu', sans-serif;
+  --grey: rgb(153,153,153);
+  --darkgrey: rgb(100,100,100);
 }
 
 .App {
@@ -61,37 +63,42 @@ article#about div.col-md-4 img{
 }
 
 /* weather project */
-input{
+.weather-box form{
+  display: inline-flex;
+  width: 86%;
+}
+.weather-box input{
   background-color: inherit;
   border: none;
-  color: var(--color-darkgrey);
+  border-bottom: 1px solid var(--darkgrey);
+  color: var(--darkgrey);
   font-size: 31px;
   margin-top: 5px;
-  font-family: var(--font);
+  font-family: var(--font-1);
 }
-input:focus{
+.weather-box input:focus{
     outline: none;
 }
 ::placeholder{
   color: var(--color-darkgrey);
   font-size: 24px;
-  font-family: var(--font);
+  font-family: var(--font-1);
 }
-hr{
-  width: 80%;
-  display: inline-block;
-  border-color: var(--color-grey);
+.weather-box button[type=submit] {
+  color: var(--color-darkergrey);
+  font-size: 20px;
+  margin-right: 25px;
+  background-color: inherit;
+  border: none;
 }
-.forecast-date{
-  font-size: 23px;
-  color: var(--color-grey);
+.weather-box button#delete {
+    color: var(--color-darkergrey);
+    background-color: transparent;
+    border: none;
+    font-size: 29px;
 }
-.forecast-high{
-  font-size: 18px;
-  font-weight:900;
-}
-.forecast-low{
-  font-size: 16px;
+.weather-box button:hover{
+  cursor: pointer;
 }
 .weather-div{
   margin-top: 8%;
@@ -102,71 +109,33 @@ hr{
 }
 .current-weather{
   height: 150px;
-  color: white;
+  color: black;
 }
-#delete{
-  z-index: 99;
-  color: var(--color-darkergrey);
-  background-color: transparent;
-  border: none;
-  position: relative;
-  top: -31px;
-  right: -400px;
-  font-size: 20px;
-}
-#mag-icon {
-  color: var(--color-darkergrey);
-  font-size: 20px;
-  display: inline;
-  margin-right: 25px;
-  background-color: inherit;
-  border: none;
-}
-#mag-icon, #delete:hover{
-  cursor: pointer;
-}
-#current-temp{
+.current-weather h1{
   font-size: 135px;
-  bottom: 54px;
   font-weight: 100;
-  left: 21%;
-  position: relative;
-  display: flex;
+  float: right;
 }
-#temp-f{
-  position: relative;
-  display: flex;
-  left: 52%;
+.current-weather sup{
   font-size: 32px;
-  margin-top: -211px;
+  vertical-align: super;
 }
-#current-desc{
-  position: relative;
-  display: flex;
-  left: 56%;
-  margin-bottom: -76px;
-  font-size: 18px;
+.current-weather .col-xs-5{
+  margin-top:40px;
+  font-size: 23px;
 }
-#humidity{
-  position: relative;
-  display: flex;
-  left: 56%;
+.forecast .col-xs-2 h1{
+  font-size: 23px;
+  color: var(--color-grey);
+  margin-bottom: -5px;
+}
+.forecast .col-xs-2 img{
+  margin-bottom: -18px;
+  height: 70px;
+}
+.forecast .col-xs-2 p{
   font-size: 18px;
 }
 
-.icon{
-  margin-bottom: -27px;
-  height: 70px;
-}
-.forecast{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  background-color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.forecast-each{
-  width: 20%;
-}
+
+

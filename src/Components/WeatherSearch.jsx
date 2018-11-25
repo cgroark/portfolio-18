@@ -61,16 +61,15 @@ class WeatherSearch extends Component{
 		let forecast = this.state.forecast;
 		let search = this.state.search;		
 		return(
-			<div className='weather-div'>
+			<div className='weather-box'>
 				<form type='input'  onSubmit={this.handleSubmit}>
-					<button type='submit' id='mag-icon'><FaSearch /></button>
+					<button type='submit'><FaSearch /></button>
 					<input placeholder='City, State' value={this.state.city} onChange={this.handleChange}></input>
 					
 				</form>
 				{forecast && 
-					<button id='delete' onClick={this.handleDelete}>X</button>
+					<button id="delete" onClick={this.handleDelete}>X</button>
 					}
-				<hr></hr>
 				{search && weather.cod === '404' &&
 					<h3>No matching city found</h3>
 				}

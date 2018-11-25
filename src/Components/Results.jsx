@@ -8,12 +8,11 @@ class Forecast extends Component {
 		let image = 'http://openweathermap.org/img/w/' + this.props.icon + '.png';
 		let date = this.props.dt.split('').slice(5,10).join('')
 		return(
-			<div className='forecast-each'>
-				<h1 className='forecast-date'>{date}</h1>
-				<img className='icon' src={image} />
-				<p className='forecast-high'>{fahrenheitMax}<sup> o </sup> F</p>
-				<p className='forecast-low'>{fahrenheitMin}<sup> o </sup> F</p>
-				
+			<div className='col-xs-2'>
+				<h1>{date}</h1>
+				<img src={image} />
+				<p><strong>{fahrenheitMax}<sup> o </sup> F</strong></p>
+				<p>{fahrenheitMin}<sup> o </sup> F</p>	
 			</div>
 		)
 	}
@@ -44,12 +43,17 @@ class Results extends Component{
 		let currentF = Math.round(current.main.temp * (9/5) -459.67);
 		return(
 			<div>
-				<div className='current-weather'>
-					<span id='current-temp'>{currentF}</span><span id="temp-f"><sup>o </sup>F</span>
-					<p id='current-desc'>{current.weather[0].description}</p>
-					<p id='humidity'>{current.main.humidity}% Humidity</p>
+				<div className='current-weather row'>
+					<div className='col-xs-7'>
+						<h1>{currentF}<sup>o F</sup></h1>
+					</div>
+					<div className='col-xs-5'>
+						
+						<p>{current.weather[0].description}</p>
+						<p>{current.main.humidity}% Humidity</p>
+					</div>
 				</div>
-				<div className='forecast'>
+				<div className='forecast row'>
 					{forecast}
 				</div>
 
