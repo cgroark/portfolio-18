@@ -63,6 +63,15 @@ article#about div.col-md-4 img{
 }
 
 /* weather project */
+.weather-box{
+  border-radius: 5px;
+  padding: 15px;
+  background: url('/images/air-atmosphere-blue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
 .weather-box form{
   display: inline-flex;
   width: 86%;
@@ -70,8 +79,8 @@ article#about div.col-md-4 img{
 .weather-box input{
   background-color: inherit;
   border: none;
-  border-bottom: 1px solid var(--darkgrey);
-  color: var(--darkgrey);
+  border-bottom: 1px solid white;
+  color: white;
   font-size: 31px;
   margin-top: 5px;
   font-family: var(--font-1);
@@ -85,14 +94,14 @@ article#about div.col-md-4 img{
   font-family: var(--font-1);
 }
 .weather-box button[type=submit] {
-  color: var(--color-darkergrey);
+  color: white;
   font-size: 20px;
   margin-right: 25px;
   background-color: inherit;
   border: none;
 }
 .weather-box button#delete {
-    color: var(--color-darkergrey);
+    color: white;
     background-color: transparent;
     border: none;
     font-size: 29px;
@@ -109,7 +118,7 @@ article#about div.col-md-4 img{
 }
 .current-weather{
   height: 150px;
-  color: black;
+  color: white;
 }
 .current-weather h1{
   font-size: 135px;
@@ -124,16 +133,23 @@ article#about div.col-md-4 img{
   margin-top:40px;
   font-size: 23px;
 }
-.forecast .col-xs-2 h1{
+.forecast{
+  display: inline-flex;
+  text-align: center;
+  color: white;
+}
+.forecast div{
+  margin: 0 10px;
+}
+.forecast div h1{
   font-size: 23px;
-  color: var(--color-grey);
   margin-bottom: -5px;
 }
-.forecast .col-xs-2 img{
+.forecast div img{
   margin-bottom: -18px;
   height: 70px;
 }
-.forecast .col-xs-2 p{
+.forecast div p{
   font-size: 18px;
 }
 

@@ -8,7 +8,7 @@ class Forecast extends Component {
 		let image = 'http://openweathermap.org/img/w/' + this.props.icon + '.png';
 		let date = this.props.dt.split('').slice(5,10).join('')
 		return(
-			<div className='col-xs-2'>
+			<div>
 				<h1>{date}</h1>
 				<img src={image} />
 				<p><strong>{fahrenheitMax}<sup> o </sup> F</strong></p>
@@ -48,15 +48,13 @@ class Results extends Component{
 						<h1>{currentF}<sup>o F</sup></h1>
 					</div>
 					<div className='col-xs-5'>
-						
 						<p>{current.weather[0].description}</p>
 						<p>{current.main.humidity}% Humidity</p>
 					</div>
 				</div>
-				<div className='forecast row'>
+				<div className='forecast'>
 					{forecast}
 				</div>
-
 			</div>
 			)
 	}
