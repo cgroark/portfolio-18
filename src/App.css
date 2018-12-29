@@ -4,12 +4,16 @@
   --font-2: 'Ubuntu', sans-serif;
   --grey: rgb(153,153,153);
   --darkgrey: rgb(100,100,100);
+  --color1: #F4B36B;
+  --color1-hover: #f8cfa0;
+  --color1-hover-dark: #be6c0e;
+  --transition: .2s;
 }
 
 .App {
 }
 main{
-  padding: 0 20px;
+  padding: 0 5%;
   font-family: var(--font-1);
 }
 h1, h2, h3{
@@ -93,21 +97,24 @@ article#about div.col-md-4 img{
   font-size: 24px;
   font-family: var(--font-1);
 }
-.weather-box button[type=submit] {
+.weather-box button{
   color: white;
-  font-size: 20px;
-  margin-right: 25px;
+  font-size: 28px;
   background-color: inherit;
   border: none;
+  transition-duration: var(--transition);
+  margin-top: 19px;
+}
+.weather-box button[type=submit] { 
+  float: left;
 }
 .weather-box button#delete {
-    color: white;
-    background-color: transparent;
-    border: none;
-    font-size: 29px;
+  float: right;
 }
 .weather-box button:hover{
   cursor: pointer;
+  transform: scale(1.09);
+  transition-duration: var(--transition);
 }
 .weather-div{
   margin-top: 8%;
@@ -152,6 +159,128 @@ article#about div.col-md-4 img{
 .forecast div p{
   font-size: 18px;
 }
+/* parks project */
+div.park-form form.park-search select{
+  font-size: 20px;
+  height: 40px;
+}
+div.park-form form.park-search select:hover{
+  cursor: pointer;
+}
+div.park-form form.park-search{
+  padding: 15px;
+  background-color: #F4B36B;
+  border-radius: 5px;
+}
+div.park-form form.park-search button{
+  font-size: 36px;
+  float: right;
+  background-color: transparent;
+  border: none;
+  transition-duration: var(--transition)
 
+}
+div.park-form form.park-search button:hover{
+  transform: scale(1.09);
+  transition-duration: var(--transition)
+}
+button.search-again{
+  color: white;
+  font-weight: bold;
+  background: var(--color1);
+  border-radius: 5px;
+  font-size: 18px;
+  border: 2px solid white;
+  padding: 5px 15px;
+  transition-duration: var(--transition);
+}
+button.search-again:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid var(--color1);
+  transition-duration: var(--transition);
+}
+ul.park-list{
+  list-style: none;
+  padding: 0;
+}
+ul.park-list li{
+  font-size: 20px;
+  padding: 8px 0;
+}
+ul.park-list li button{
+  font-size: 16px;
+}
+ul.park-list li button:first-of-type{
+  margin: 0 8px;
+  color: var(--color1);
+  border: none;
+  font-weight: bold;
+}
+ul.park-list li button:first-of-type:hover{
+  color: var(--color1-hover-dark);
+}
 
+ul.park-list li button:nth-of-type(2){
+  display: block;
+  margin-top: 4px;
+  border: 2px solid var(--color1);
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition-duration: var(--transition);
+
+}
+ul.park-list li button:nth-of-type(2):hover{
+  background-color:var(--color1);
+  color: white;
+  transition-duration: var(--transition);
+
+}
+div.forecast-div{
+  border-bottom: solid 2px;
+  color: black;
+}
+div.forecast-div p, div.forecast-div a{
+  font-size: 16px;
+}
+div.forecast-div p.one-forecast{
+  font-weight: bold;
+  margin-bottom: 0;
+}
+div.forecast-div div div p:nth-of-type(1){
+  font-weight: bold;
+  margin-bottom: 0;
+}
+div.forecast-div button{
+  border: none;
+  font-weight: bold;
+  color: var(--color1-hover-dark);
+  padding: 10px;
+  font-size: 18px;
+}
+div.forecast-div button:hover{
+  color: var(--color1);
+}
+div.park-favs button{
+  margin-right: 10px;
+  background: #333;
+  border: solid #333 2px;
+  border-radius: 4px;
+  color: var(--color1);
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+div.park-favs{
+  border-bottom: 2px solid black;
+}
+div.park-favs button:hover{
+  background: white;
+  color: black;
+  border: var(--color1) solid 2px;
+}
+div.park-favs a{
+  font-size: 18px;
+}
 

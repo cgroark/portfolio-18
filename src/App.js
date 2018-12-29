@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import WeatherSearch from './Components/WeatherSearch';
+import Parks from './Components/Parks'
 import './App.css';
 require('dotenv').config();
 
@@ -36,7 +37,13 @@ class App extends Component {
           <h1>Recent Projects</h1>
             <div className="row">
               <div className='col-md-6'>
+                <h2>Weather Watcher</h2>
+
                 <WeatherSearch />
+              </div>
+              <div className='col-md-6'>
+                <h2>Find a Park</h2>
+                <Parks />
               </div>
             </div>
           </article>
